@@ -75,8 +75,7 @@ contains
 
     print *, "The following fatal error occured in m_config:"
     print *, trim(err_string)
-    ! Gnu extension to get a backtrace
-    call abort()
+    stop
   end subroutine handle_error
 
   !> Update the variables in the configartion with the values found in 'filename'
